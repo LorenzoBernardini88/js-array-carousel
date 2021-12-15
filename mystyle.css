@@ -25,11 +25,12 @@ body{
     display: block;
 }
 .ms_container2{
+    position: relative;
     height: 100%;
 }
 .ms_img_cont{
     height:100px;
-    position: relative;
+    
 }
 .ms_img_cont img{
     width: 100%;
@@ -40,17 +41,16 @@ body{
 a{
     color:white;
 }
-.ms_btn_up{
+.arrow{
     position: absolute;
     left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+    transform: translateX(-30px);
 }
-.ms_btn_down{
-    position: absolute;
-    left: 50%;
+#up{
+    top: 0;
+}
+#down{
     bottom: 0;
-    transform: translateX(-50%);
 }
 .bi{
     font-size: 30px;
