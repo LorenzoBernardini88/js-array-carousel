@@ -28,6 +28,10 @@ const leftImagesContainer = document.querySelector('.ms_anteprima');
 for(let count=0; count<items.length; count++)
 {
     leftImagesContainer.innerHTML += `<div class=" ms_left_img " id="sx_img_${count}">
+        <div class="img_testo">
+            <h1>${title[count]}</h1>
+            <p>${text[count]}</p>
+        </div>
         <img src="${items[count]}">  
     </div>`
 }
@@ -72,7 +76,7 @@ prev.addEventListener('click',function(){
 
     idIncrem--;
 
-    if(idIncrem < 0 ){
+    if(idIncrem < 0){
         idIncrem = 4;
     }
 

@@ -14,6 +14,7 @@ body{
     height: 100%;
 }
 .ms_left_img{
+    position: relative;
     display: none;
     height: 100%;
 }
@@ -57,7 +58,18 @@ a{
     font-size: 30px;
 }
 
+/* cornice dinamica */
 .border_active{
     border: solid 2px white;
+}
+
+/* testo dinamico img sinistra */
+.img_testo{
+    color: white;
+    position: absolute;
+    text-align:right;
+    margin: 0 5px;
+    right: 0;
+    bottom: 0;
 }
 
