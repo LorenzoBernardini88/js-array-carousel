@@ -22,12 +22,28 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 let contatore = 0;
-const rightImagesContainer = document.querySelector('.ms_container2')
+const rightImagesContainer = document.querySelector('.ms_container2');
+const leftImagesContainer = document.querySelector('.ms_anteprima');
+
+for(let count=0; count<items.length; count++)
+{
+    leftImagesContainer.innerHTML += `<div class=" ms_left_img ">
+        <img src="${items[count]}">  
+    </div>`
+}
+
 
 for( let count = 0; count < items.length; count++ )
 {
-    console.log( count )
-    rightImagesContainer.innerHTML += `<div class="col ms_img_cont right_image_${items[count]}">
+    rightImagesContainer.innerHTML += `<div class="col p-0 ms_img_cont right_image_${items[count]}">
             <img src="${items[count]}">          
     </div>`
 }
+
+
+
+
+
+
+
+

@@ -12,7 +12,10 @@ body{
 .ms_slider{
     height: 100%;
 }
-.ms_anteprima img{
+.ms_left_img{
+    height: 100%;
+}
+.ms_left_img img{
     height: 100%;
     width: 100%;
 }
