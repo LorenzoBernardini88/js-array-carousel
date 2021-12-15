@@ -21,7 +21,7 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
-let contatore = 0;
+
 const rightImagesContainer = document.querySelector('.ms_container2');
 const leftImagesContainer = document.querySelector('.ms_anteprima');
 
@@ -34,7 +34,7 @@ for(let count=0; count<items.length; count++)
 
 for( let count = 0; count < items.length; count++ )
 {
-    rightImagesContainer.innerHTML += `<div class="col p-0 ms_img_cont right_image_${items[count]}">
+    rightImagesContainer.innerHTML += `<div class="col p-0 ms_img_cont" id="dx_img_${count}">
             <img src="${items[count]}">          
     </div>`
 }
@@ -43,24 +43,45 @@ let idIncrem = 0;
 let imgActive = document.getElementById('sx_img_'+idIncrem);
 imgActive.classList.add('active');
 
+let imgBorder = document.getElementById('dx_img_'+idIncrem);
+imgBorder.classList.add('border_active');
+
+
+
 const prev = document.getElementById('up');
 const next = document.getElementById('down');
 
 next.addEventListener('click',function(){
 
     idIncrem++;
+
+    if(idIncrem > 4){
+        idIncrem = 0;
+    }
+
     imgActive.classList.remove('active');
     imgActive = document.getElementById('sx_img_'+idIncrem);
     imgActive.classList.add('active');
+    imgBorder.classList.remove('border_active');
+    imgBorder = document.getElementById('dx_img_'+idIncrem);
+    imgBorder.classList.add('border_active');
     
 })
 
 prev.addEventListener('click',function(){
 
     idIncrem--;
+
+    if(idIncrem < 0 ){
+        idIncrem = 4;
+    }
+
     imgActive.classList.remove('active');
     imgActive = document.getElementById('sx_img_'+idIncrem);
     imgActive.classList.add('active');
+    imgBorder.classList.remove('border_active');
+    imgBorder = document.getElementById('dx_img_'+idIncrem);
+    imgBorder.classList.add('border_active');
     
 })
 

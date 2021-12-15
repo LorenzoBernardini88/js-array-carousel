@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: lightgrey;
 }
 .ms_container{
     height: 500px;
@@ -56,4 +57,7 @@ a{
     font-size: 30px;
 }
 
+.border_active{
+    border: solid 2px white;
+}
 
