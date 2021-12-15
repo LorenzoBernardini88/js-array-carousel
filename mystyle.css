@@ -13,11 +13,16 @@ body{
     height: 100%;
 }
 .ms_left_img{
+    display: none;
     height: 100%;
 }
 .ms_left_img img{
+    
     height: 100%;
     width: 100%;
+}
+.active{
+    display: block;
 }
 .ms_container2{
     height: 100%;

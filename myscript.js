@@ -25,9 +25,10 @@ let contatore = 0;
 const rightImagesContainer = document.querySelector('.ms_container2');
 const leftImagesContainer = document.querySelector('.ms_anteprima');
 
+
 for(let count=0; count<items.length; count++)
 {
-    leftImagesContainer.innerHTML += `<div class=" ms_left_img ">
+    leftImagesContainer.innerHTML += `<div class=" ms_left_img " id="sx_img_${count}">
         <img src="${items[count]}">  
     </div>`
 }
@@ -40,7 +41,9 @@ for( let count = 0; count < items.length; count++ )
     </div>`
 }
 
-
+let idIncrem = 0;
+let imgActive = document.getElementById('sx_img_'+idIncrem);
+imgActive.classList.add('active');
 
 
 
