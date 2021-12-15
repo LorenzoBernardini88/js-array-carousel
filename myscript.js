@@ -22,9 +22,11 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
+// Seleziono contenitore sistra e destra
 const rightImagesContainer = document.querySelector('.ms_container2');
 const leftImagesContainer = document.querySelector('.ms_anteprima');
 
+// ciclo for contenitore sinistra per inserire immagini e testo [items]
 for(let count=0; count<items.length; count++)
 {
     leftImagesContainer.innerHTML += `<div class=" ms_left_img " id="sx_img_${count}">
@@ -36,6 +38,7 @@ for(let count=0; count<items.length; count++)
     </div>`
 }
 
+// ciclo for contenitore destra per inserire immagini [items]
 for( let count = 0; count < items.length; count++ )
 {
     rightImagesContainer.innerHTML += `<div class="col p-0 ms_img_cont" id="dx_img_${count}">
@@ -43,18 +46,19 @@ for( let count = 0; count < items.length; count++ )
     </div>`
 }
 
-let idIncrem = 0;
+let idIncrem = 0; //creo variabile incremento per img id dinamico
 let imgActive = document.getElementById('sx_img_'+idIncrem);
-imgActive.classList.add('active');
+imgActive.classList.add('active');//assegno classe .active a primo contenitore 0 sinistra
 
 let imgBorder = document.getElementById('dx_img_'+idIncrem);
-imgBorder.classList.add('border_active');
+imgBorder.classList.add('border_active');//assegno classe .border_active a primo contenitore 0 destra
 
 
-
+// creo variabili per button up e down
 const prev = document.getElementById('up');
 const next = document.getElementById('down');
 
+// funzione per gestire evento 'click' su button down
 next.addEventListener('click',function(){
 
     idIncrem++;
@@ -72,6 +76,7 @@ next.addEventListener('click',function(){
     
 })
 
+// funzione per gestire evento 'click' su button up
 prev.addEventListener('click',function(){
 
     idIncrem--;
